@@ -22,7 +22,8 @@ class Contact {
 	public:
 		void			AddInfo(void);
 		void			PrintInfo(void);
-		int				id;
+
+	private:
 		bool			data;
 		std::string		firstname;
 		std::string		lastname;
@@ -114,9 +115,9 @@ int		main()
 			{
 				std::cout << std::setw(10);
 				std::cout << i << " | ";
-				std::cout << person[i].firstname << " | ";
-				std::cout << person[i].lastname << " | ";
-				std::cout << person[i].nickname << std::endl;
+//				std::cout << person[i].firstname << " | ";
+	//			std::cout << person[i].lastname << " | ";
+		//		std::cout << person[i].nickname << std::endl;
 			}
 			std::cout << "Choose Index" << std::endl;
 			std::cin >> command;
@@ -133,50 +134,3 @@ int		main()
 			std::cout << "Command not recognized" << std::endl;
 	}
 }
-
-/**
-void Contact::SetFirstName(std::string tmp) {
-	firstname = tmp;
-}
-
-std::string Contact::GetFirstName() const {
-	return firstname;
-}
-
-int		main()
-{
-	Contact person;
-	std::string tmp;
-
-	std::cout << "Enter First Name : " << std::endl;
-	std::cin >> tmp;
-	person.SetFirstName(tmp);
-
-	std::cout << "Enter Last Name : " << std::endl;
-	std::cin >> person.lastname;
-
-	std::cin.ignore();
-	std::cout << "Enter Nickname: " << std::endl;
-	std::getline(std::cin, person.nickname);
-
-	std::cin.ignore();
-	std::cout << "Enter Phone Number: " << std::endl;
-	std::getline(std::cin, person.number);
-
-	std::cout << "\n\nFirst Name:\t" << person.GetFirstName();
-	std::cout << "\nLast Name:\t" << person.lastname;
-	std::cout << "\nNick Name:\t" << person.nickname;
-	std::cout << "\nPhone Number:\t" << person.number << std::endl;
-
-
-	std::cout << "Enter the Number: " << std::endl;
-	std::cin >> person.number;
-
-	std::cin.ignore();
-	std::cout << "Enter Nickname: ";
-	std::getline(std::cin, person.nickname);
-
-	std::cout << person.firstname << ": " << person.nickname << std::endl;
-	return (0);
-}
-**/
