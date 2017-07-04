@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 09:02:19 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 09:32:36 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/04 15:45:30 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,7 +154,7 @@ int		main()
 		{
 			SearchInfo(person);
 		}
-		else if (command.compare(0, 5, "EXIT") == 0)
+		else if (command.compare(0, 4, "EXIT") == 0)
 			exit(EXIT_SUCCESS);
 		else
 			std::cout << "Command not recognized" << std::endl;
