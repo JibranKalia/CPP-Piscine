@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 09:02:19 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 09:09:15 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/04 09:32:36 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,37 +19,37 @@ void Contact::AddInfo()
 	this->data = true;
 
 	std::cout << "Enter First Name: ";
-	std::getline(std::cin, this->firstname);
+	std::getline(std::cin, firstname);
 
 	std::cout << "Enter Last Name: ";
-	std::getline(std::cin, this->lastname);
+	std::getline(std::cin, lastname);
 
 	std::cout << "Enter Nick Name: ";
-	std::getline(std::cin, this->nickname);
+	std::getline(std::cin, nickname);
 
 	std::cout << "Enter Login: ";
-	std::getline(std::cin, this->login);
+	std::getline(std::cin, login);
 
 	std::cout << "Enter Postal Address: ";
-	std::getline(std::cin, this->paddress);
+	std::getline(std::cin, paddress);
 
 	std::cout << "Enter Email Address: ";
-	std::getline(std::cin, this->eaddress);
+	std::getline(std::cin, eaddress);
 
 	std::cout << "Enter Phone Number: ";
-	std::getline(std::cin, this->number);
+	std::getline(std::cin, number);
 
 	std::cout << "Enter Birthdate: ";
-	std::getline(std::cin, this->date);
+	std::getline(std::cin, date);
 
 	std::cout << "Enter Favourite Meal: ";
-	std::getline(std::cin, this->meal);
+	std::getline(std::cin, meal);
 
 	std::cout << "Enter Underwear Color: ";
-	std::getline(std::cin, this->color);
+	std::getline(std::cin, color);
 
 	std::cout << "Enter Darkest Secret: ";
-	std::getline(std::cin, this->secret);
+	std::getline(std::cin, secret);
 
 	++g_count;
 }
@@ -57,37 +57,37 @@ void Contact::AddInfo()
 
 void Contact::PrintInfo() const
 {
-	std::cout << "first name: " << this->firstname << std::endl;
-	std::cout << "last name: " << this->lastname << std::endl;
-	std::cout << "nickname: " << this->nickname << std::endl;
-	std::cout << "login: " << this->login << std::endl;
-	std::cout << "postal adress: " << this->paddress << std::endl;
-	std::cout << "email adress: " << this->eaddress << std::endl;
-	std::cout << "phone number: " << this->number << std::endl;
-	std::cout << "birthday date: " << this->date << std::endl;
-	std::cout << "favorite meal: " << this->meal << std::endl;
-	std::cout << "underwear color: " << this->color << std::endl;
-	std::cout << "darkest secret: " << this->secret << std::endl;
+	std::cout << "first name: " << firstname << std::endl;
+	std::cout << "last name: " << lastname << std::endl;
+	std::cout << "nickname: " << nickname << std::endl;
+	std::cout << "login: " << login << std::endl;
+	std::cout << "postal adress: " << paddress << std::endl;
+	std::cout << "email adress: " << eaddress << std::endl;
+	std::cout << "phone number: " << number << std::endl;
+	std::cout << "birthday date: " << date << std::endl;
+	std::cout << "favorite meal: " << meal << std::endl;
+	std::cout << "underwear color: " << color << std::endl;
+	std::cout << "darkest secret: " << secret << std::endl;
 }
 
 bool Contact::GetStatus() const
 {
-	return this->data;
+	return data;
 }
 
 std::string Contact::GetFirstName() const
 {
-	return this->firstname;
+	return firstname;
 }
 
 std::string Contact::GetLastName() const
 {
-	return this->lastname;
+	return lastname;
 }
 
 std::string Contact::GetNickName() const
 {
-	return this->nickname;
+	return nickname;
 }
 
 void PrintFormat(std::string tmp)
