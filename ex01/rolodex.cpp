@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 10:16:36 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/03 15:24:00 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/04 08:50:59 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ class Contact {
 	public:
 		void			AddInfo(void);
 		void			PrintInfo(void);
+		std::string 	GetFirstName(void);
+		std::string 	GetLastName(void);
+		std::string 	GetNickName(void);
+		bool			GetStatus(void);
 
 	private:
 		bool			data;
@@ -84,12 +88,84 @@ void Contact::AddInfo()
 
 void Contact::PrintInfo()
 {
-	std::cout << this->firstname << std::endl;
-	std::cout << this->lastname << std::endl;
-	std::cout << this->nickname << std::endl;
-//	std::cout << this->login << std::endl;
-//	std::cout << this->paddress << std::endl;
-//	std::cout << this->eaddress << std::endl;
+	std::cout << "first name: " << this->firstname << std::endl;
+	std::cout << "last name: " << this->lastname << std::endl;
+	std::cout << "nickname: " << this->nickname << std::endl;
+	/**
+	std::cout << "login: " << this->login << std::endl;
+	std::cout << "postal adress: " << this->paddress << std::endl;
+	std::cout << "email adress: " << this->eaddress << std::endl;
+	std::cout << "phone number: " << this->number << std::endl;
+	std::cout << "birthday date: " << this->date << std::endl;
+	std::cout << "favorite meal: " << this->meal << std::endl;
+	std::cout << "underwear color: " << this->color << std::endl;
+	std::cout << "darkest secret: " << this->secret << std::endl;
+	**/
+}
+
+bool Contact::GetStatus()
+{
+	return this->data;
+}
+
+std::string Contact::GetFirstName()
+{
+	return this->firstname;
+}
+
+std::string Contact::GetLastName()
+{
+	return this->lastname;
+}
+
+std::string Contact::GetNickName()
+{
+	return this->nickname;
+}
+
+void PrintFormat(std::string tmp)
+{
+	if (tmp.length() > 10)
+		std::cout << std::right << std::setw(10) << tmp.substr(0, 9).append(".");
+	else
+		std::cout << std::right << std::setw(10) << tmp.substr(0, 10);
+}
+
+void SearchInfo(Contact *person)
+{
+	std::string		command;
+	std::string		tmp;
+	int				number;
+
+	std::cout << std::right << std::setw(10) << "index" << " | ";
+	std::cout << std::right << std::setw(10) << "first name" << " | ";
+	std::cout << std::right << std::setw(10) << "last name" << " | ";
+	std::cout << std::right << std::setw(10) << "nickname" << std::endl;
+	int i = 0;
+	while (i < 8)
+	{
+		if (person[i].GetStatus() == false)
+			break;
+		std::cout << std::setw(10);
+		std::cout << i << " | ";
+		PrintFormat(person[i].GetFirstName());
+		std::cout << " | ";
+		PrintFormat(person[i].GetLastName());
+		std::cout << " | ";
+		PrintFormat(person[i].GetNickName());
+		std::cout << std::endl;
+		++i;
+	}
+	std::cout << "Choose Index" << std::endl;
+	std::cin >> command;
+	std::stringstream(command) >> number;
+	std::cin.ignore();
+	std::cout << "Index: " << number << std::endl;
+	if (number < 0 || number > g_count)
+		std:: cout << "Index out of bounds" << std::endl;
+	else
+		person[number].PrintInfo();
+
 }
 
 int		main()
@@ -99,7 +175,6 @@ int		main()
 	while (1)
 	{
 		std::string		command;
-		int				number;
 		std::cout << "\nEnter Command: ADD / SEARCH / EXIT" << std::endl;
 		std::getline(std::cin, command);
 		if (command.compare(0, 3, "ADD") == 0)
@@ -111,22 +186,7 @@ int		main()
 		}
 		else if (command.compare(0, 6, "SEARCH") == 0)
 		{
-			for (int i = 0; i < g_count; ++i)
-			{
-				std::cout << std::setw(10);
-				std::cout << i << " | ";
-//				std::cout << person[i].firstname << " | ";
-	//			std::cout << person[i].lastname << " | ";
-		//		std::cout << person[i].nickname << std::endl;
-			}
-			std::cout << "Choose Index" << std::endl;
-			std::cin >> command;
-			std::stringstream(command) >> number;
-			std::cin.ignore();
-			if (number < 0 || number > g_count)
-				std:: cout << "Index out of bounds" << std::endl;
-			else
-				person[number].PrintInfo();
+			SearchInfo(person);
 		}
 		else if (command.compare(0, 5, "EXIT") == 0)
 			exit(EXIT_SUCCESS);
