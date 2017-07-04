@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 09:16:15 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 12:24:23 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/04 12:36:02 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ bool	Account::makeWithdrawal( int withdrawl ){
 	_totalAmount -= withdrawl;
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex
-		<< ";pamount:" << tmp
+		<< ";p_amount:" << tmp
 		<< ";withdrawl:" << withdrawl
 		<< ";amount:" << _amount
 		<< ";nb_withdrawls:" << _nbWithdrawals << std::endl;
@@ -111,27 +111,9 @@ void	Account::makeDeposit( int deposit ){
 	_totalAmount += deposit;
 
 	std::cout << "index:" << _accountIndex
-		<< ";pamount:" << tmp
+		<< ";p_amount:" << tmp
 		<< ";deposit:" << deposit
 		<< ";amount:" << _amount
 		<< ";nb_deposits:" << _nbDeposits << std::endl;
 	return;
-}
-
-
-
-int		main(void)
-{
-	Account entry(133);
-	int		test;
-
-	test = entry.checkAmount();
-	entry.displayStatus();
-	entry.displayAccountsInfos();
-	entry.makeDeposit(5);
-	entry.displayAccountsInfos();
-	entry.makeWithdrawal(15);
-	entry.displayStatus();
-	entry.displayAccountsInfos();
-	entry.makeWithdrawal(13333);
 }
