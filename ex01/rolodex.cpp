@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 10:16:36 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 08:50:59 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/04 08:59:26 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <sstream>
 
 int		g_count = 0;
-#define MAX 3
+#define MAX 8
 
 class Contact {
 	public:
@@ -56,31 +56,29 @@ void Contact::AddInfo()
 	std::cout << "Enter Nick Name: ";
 	std::getline(std::cin, this->nickname);
 
-	/**
-	std::cout << "Enter Login: " << std::endl;
+	std::cout << "Enter Login: ";
 	std::getline(std::cin, this->login);
 
-	std::cout << "Enter Postal Address: " << std::endl;
+	std::cout << "Enter Postal Address: ";
 	std::getline(std::cin, this->paddress);
 
-	std::cout << "Enter Email Address: " << std::endl;
+	std::cout << "Enter Email Address: ";
 	std::getline(std::cin, this->eaddress);
 
-	std::cout << "Enter Phone Number: " << std::endl;
+	std::cout << "Enter Phone Number: ";
 	std::getline(std::cin, this->number);
 
-	std::cout << "Enter Birthdate: " << std::endl;
+	std::cout << "Enter Birthdate: ";
 	std::getline(std::cin, this->date);
 
-	std::cout << "Enter Favourite Meal: " << std::endl;
+	std::cout << "Enter Favourite Meal: ";
 	std::getline(std::cin, this->meal);
 
-	std::cout << "Enter Underwear Color: " << std::endl;
+	std::cout << "Enter Underwear Color: ";
 	std::getline(std::cin, this->color);
 
-	std::cout << "Enter Darkest Secret: " << std::endl;
+	std::cout << "Enter Darkest Secret: ";
 	std::getline(std::cin, this->secret);
-	**/
 
 	++g_count;
 }
@@ -91,7 +89,6 @@ void Contact::PrintInfo()
 	std::cout << "first name: " << this->firstname << std::endl;
 	std::cout << "last name: " << this->lastname << std::endl;
 	std::cout << "nickname: " << this->nickname << std::endl;
-	/**
 	std::cout << "login: " << this->login << std::endl;
 	std::cout << "postal adress: " << this->paddress << std::endl;
 	std::cout << "email adress: " << this->eaddress << std::endl;
@@ -100,7 +97,6 @@ void Contact::PrintInfo()
 	std::cout << "favorite meal: " << this->meal << std::endl;
 	std::cout << "underwear color: " << this->color << std::endl;
 	std::cout << "darkest secret: " << this->secret << std::endl;
-	**/
 }
 
 bool Contact::GetStatus()
@@ -160,8 +156,7 @@ void SearchInfo(Contact *person)
 	std::cin >> command;
 	std::stringstream(command) >> number;
 	std::cin.ignore();
-	std::cout << "Index: " << number << std::endl;
-	if (number < 0 || number > g_count)
+	if (number < 0 || number > (g_count - 1))
 		std:: cout << "Index out of bounds" << std::endl;
 	else
 		person[number].PrintInfo();
