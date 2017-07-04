@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 09:16:15 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 12:36:02 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/04 15:13:39 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,29 +73,29 @@ void	Account::displayStatus( void ) const {
 		<< ";withdrawals:" << _nbWithdrawals << std::endl;
 }
 
-bool	Account::makeWithdrawal( int withdrawl ){
+bool	Account::makeWithdrawal( int withdrawal ){
 
 	int		tmp;
 
 	tmp = _amount;
-	if (withdrawl > _amount)
+	if (withdrawal > _amount)
 	{
 		_displayTimestamp();
 		std::cout << "index:" << _accountIndex
-			<< ";pamount:" << tmp
-			<< ";withdrawl:refused" << std::endl;
+			<< ";p_amount:" << tmp
+			<< ";withdrawal:refused" << std::endl;
 		return (false);
 	}
 	_totalNbWithdrawals++;
 	_nbWithdrawals++;
-	_amount -= withdrawl;
-	_totalAmount -= withdrawl;
+	_amount -= withdrawal;
+	_totalAmount -= withdrawal;
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex
 		<< ";p_amount:" << tmp
-		<< ";withdrawl:" << withdrawl
+		<< ";withdrawal:" << withdrawal
 		<< ";amount:" << _amount
-		<< ";nb_withdrawls:" << _nbWithdrawals << std::endl;
+		<< ";nb_withdrawals:" << _nbWithdrawals << std::endl;
 	return (true);
 	
 }
