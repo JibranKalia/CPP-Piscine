@@ -6,12 +6,12 @@
 #    By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 08:31:22 by jkalia            #+#    #+#              #
-#    Updated: 2017/07/03 11:14:04 by jkalia           ###   ########.fr        #
+#    Updated: 2017/07/04 09:03:15 by jkalia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = rolodex
-OBJECTS = rolodex.o
+OBJECTS = Contact.class.o
 $(RM) = rm -f
 CXXFLAGS = -Wall -Werror -Wextra
 all: $(NAME)

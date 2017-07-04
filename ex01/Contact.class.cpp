@@ -1,47 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rolodex.cpp                                        :+:      :+:    :+:   */
+/*   Contact.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/03 10:16:36 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 08:59:26 by jkalia           ###   ########.fr       */
+/*   Created: 2017/07/04 09:02:19 by jkalia            #+#    #+#             */
+/*   Updated: 2017/07/04 09:02:57 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <sstream>
+#include "Contact.class.hpp"
 
 int		g_count = 0;
-#define MAX 8
-
-class Contact {
-	public:
-		void			AddInfo(void);
-		void			PrintInfo(void);
-		std::string 	GetFirstName(void);
-		std::string 	GetLastName(void);
-		std::string 	GetNickName(void);
-		bool			GetStatus(void);
-
-	private:
-		bool			data;
-		std::string		firstname;
-		std::string		lastname;
-		std::string		nickname;
-		std::string		login;
-		std::string		paddress;
-		std::string		eaddress;
-		std::string		number;
-		std::string		date;
-		std::string		meal;
-		std::string 	color;
-		std::string		secret;
-};
-
 
 void Contact::AddInfo()
 {
