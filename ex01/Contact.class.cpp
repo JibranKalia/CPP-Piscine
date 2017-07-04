@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 09:02:19 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 09:02:57 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/04 09:09:15 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void Contact::AddInfo()
 }
 
 
-void Contact::PrintInfo()
+void Contact::PrintInfo() const
 {
 	std::cout << "first name: " << this->firstname << std::endl;
 	std::cout << "last name: " << this->lastname << std::endl;
@@ -70,22 +70,22 @@ void Contact::PrintInfo()
 	std::cout << "darkest secret: " << this->secret << std::endl;
 }
 
-bool Contact::GetStatus()
+bool Contact::GetStatus() const
 {
 	return this->data;
 }
 
-std::string Contact::GetFirstName()
+std::string Contact::GetFirstName() const
 {
 	return this->firstname;
 }
 
-std::string Contact::GetLastName()
+std::string Contact::GetLastName() const
 {
 	return this->lastname;
 }
 
-std::string Contact::GetNickName()
+std::string Contact::GetNickName() const
 {
 	return this->nickname;
 }
