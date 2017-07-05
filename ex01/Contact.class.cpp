@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 09:02:19 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/04 15:45:30 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/05 08:25:30 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ void PrintFormat(std::string tmp) {
 }
 
 void SearchInfo(Contact *person) {
-  std::string command;
   std::string tmp;
   int number;
 
@@ -108,9 +107,9 @@ void SearchInfo(Contact *person) {
     ++i;
   }
   std::cout << "Choose Index" << std::endl;
-  std::cin >> command;
-  std::stringstream(command) >> number;
+  std::cin >> number;
   std::cin.ignore();
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
   if (number < 0 || number > (g_count - 1))
     std::cout << "Index out of bounds" << std::endl;
   else
