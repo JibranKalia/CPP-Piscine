@@ -14,13 +14,15 @@
 
 Zombie::Zombie(std::string setname, std::string settype)
     : _name(setname), _type(settype) {
-	std::cout << "Zombie name: " << _name << " of type " << _type << " created." << std::endl;
+  std::cout << "Zombie name: " << _name << " of type " << _type << " created."
+            << std::endl;
   return;
 }
 
-Zombie::~Zombie() { 
-	std::cout << "Zombie name: " << _name << " of type " << _type << " destroyed." << std::endl;
-	return; 
+Zombie::~Zombie() {
+  std::cout << "Zombie name: " << _name << " of type " << _type << " destroyed."
+            << std::endl;
+  return;
 }
 
 void Zombie::announce(void) {

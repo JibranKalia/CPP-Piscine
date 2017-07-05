@@ -13,8 +13,7 @@
 #include "Zombie.hpp"
 #include "ZombieEvent.hpp"
 
-int		main(void)
-{
+int main(void) {
   Zombie test("blah", "adddd");
   test.announce();
 

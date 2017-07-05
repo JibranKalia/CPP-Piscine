@@ -16,12 +16,12 @@
 #include "Zombie.hpp"
 
 class ZombieEvent {
-  public:
-	  void setZombieType(std::string _type);
-	  Zombie *newZombie(std::string name);
-	  Zombie randomChump(void);
+ public:
+  void setZombieType(std::string _type);
+  Zombie *newZombie(std::string name);
+  Zombie randomChump(void);
 
-  private:
-	  std::string	_zombietype;
+ private:
+  std::string _zombietype;
 };
 #endif
