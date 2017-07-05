@@ -6,7 +6,7 @@
 #    By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 08:31:22 by jkalia            #+#    #+#              #
-#    Updated: 2017/07/05 06:35:54 by jkalia           ###   ########.fr        #
+#    Updated: 2017/07/05 10:36:18 by jkalia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,19 +41,11 @@ format: $(SRCS) $(HDRS)
 	    clang-format -style=Google -i $^
 
 clean:
-	@if [ -e $(OBJECTS) ]; \
-		then \
-		rm -rf $(OBJECTS); \
-		printf "\r\033[32mRemoving $(OBJECTS)\033[0m\033[K\n"; \
-		fi;
+	rm -f $(OBJS)
 
 fclean: clean
 	@$(MAKE) clean
-	@if [ -e $(NAME) ]; \
-		then \
-		rm -f $(NAME); \
-		printf "\r\033[32mRemoving $(NAME)\033[0m\033[K\n"; \
-		fi;
+	rm -f $(NAME);
 
 re:
 	@$(MAKE) fclean
