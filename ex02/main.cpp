@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 08:12:08 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/05 09:56:47 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/05 10:30:05 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 #include "ZombieEvent.hpp"
 
 int main(void) {
-  Zombie test("blah", "adddd");
+  Zombie test("Batman", "simple");
   test.announce();
 
   ZombieEvent lab;
-  lab.setZombieType("Factory");
+  lab.setZombieType("lab");
   lab.randomChump();
   lab.randomChump();
   lab.randomChump();
+
+  Zombie *last = lab.newZombie("Joker");
+  last->announce();
+  delete last;
 }

@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 08:20:11 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/05 10:14:54 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/05 10:26:12 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 
 void ZombieEvent::setZombieType(std::string type) { _zombietype = type; }
 
-Zombie *ZombieEvent::newZombie(std::string name) {
+ZombieEvent::ZombieEvent() {
   std::srand(std::time(0));
+  return;
+}
+
+ZombieEvent::~ZombieEvent() { return; }
+
+Zombie *ZombieEvent::newZombie(std::string name) {
+  std::cout << "From the heap Zombie " << name << " rises" << std::endl;
   return new Zombie(name, _zombietype);
 }
 
