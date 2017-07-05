@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 10:54:19 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/05 11:05:39 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/05 11:35:00 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ class ZombieHorde {
  public:
   ZombieHorde(int N);
   ~ZombieHorde(void);
-  void randomChump();
+  std::string _randomname(int length);
 
  private:
   int _limit;
+  void *raw_memory;
+  Zombie *horde;
   std::string _zombietype;
 };
 
