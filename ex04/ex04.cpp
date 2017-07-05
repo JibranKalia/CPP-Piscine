@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/05 08:06:07 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/05 12:05:53 by jkalia           ###   ########.fr       */
+/*   Created: 2017/07/05 11:45:11 by jkalia            #+#    #+#             */
+/*   Updated: 2017/07/05 12:05:31 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
 #include <iostream>
 
-class Zombie {
- public:
-  Zombie(std::string name, std::string type);
-  ~Zombie(void);
-  void announce();
+int main(void) {
+  std::string original = "HI THIS IS BRAIN";
+  std::string* ptr = &original;
+  std::string& ref = original;
 
- private:
-  std::string _name;
-  std::string _type;
-};
-
-#endif
+  std::cout << "Print using Pointer:" << std::endl;
+  std::cout << *ptr << std::endl;
+  std::cout << "Print using Ref:" << std::endl;
+  std::cout << ref << std::endl;
+  return (0);
+}
