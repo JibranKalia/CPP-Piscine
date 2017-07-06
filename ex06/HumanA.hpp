@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 20:25:00 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/05 20:50:30 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/05 21:42:39 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@
 
 class HumanA {
  public:
-  HumanA(std::string setname, Weapon setweapon);
+  HumanA(std::string name, Weapon& weapon);
   ~HumanA();
-  void attack() const;
+  void attack();
+  void setWeapon(Weapon& weapon);
 
  private:
-  Weapon _weaponA;
   std::string _name;
+  Weapon& _weaponA;
 };
 #endif
