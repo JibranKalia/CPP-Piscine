@@ -5,9 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/07 07:40:23 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 07:40:25 by jkalia           ###   ########.fr       */
+/*   Created: 2017/07/07 11:58:39 by jkalia            #+#    #+#             */
+/*   Updated: 2017/07/07 11:58:43 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "FragTrap.hpp"
 
+int	main(void)
+{
+	FragTrap robot;
+	return 0;
+}
