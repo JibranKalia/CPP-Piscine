@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:03 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 11:58:05 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 12:55:44 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,39 @@
 
 #include <iostream>
 
-class FragTrap
-{
-	public:
-		rangedAttack(std::string const& target);
-		meleeAttack(std::string const& target);
-		takeDamage(unsigned int amount);
-		beRepaired(unsigned int amount);
-		vaulthunter_dot_exe(std::string const& target);
-		FragTrap();
-		~FragTrap();
+class FragTrap {
+ public:
+  FragTrap(std::string inname);
+  ~FragTrap();
+  FragTrap(const FragTrap& src);
 
-	private:
-		int _hitPoints;
-		int _maxHitPoints;
-		int _energyPoints;
-		int _maxEnergyPoints;
-		int _level;
-		std::string _name;
-		int _meleeAttackDamage;
-		int _rangedAttackDamage;
-		int _armorDamageReduction;
-}
+  FragTrap& operator=(const FragTrap& src);
+  unsigned int get_hitPoints() const;
+  unsigned int get_maxHitPoints() const;
+  unsigned int get_energyPoints() const;
+  unsigned int get_maxEnergyPoints() const;
+  unsigned int get_level() const;
+  std::string get_name() const;
+  void set_name(std::string);
+  unsigned int get_meleeAttackDamage() const;
+  unsigned int get_rangedAttackDamage() const;
+  unsigned int get_armorDamageReduction() const;
+
+  bool rangedAttack(std::string const& target);
+  bool meleeAttack(std::string const& target);
+  void takeDamage(unsigned int amount);
+  void beRepaired(unsigned int amount);
+  bool vaulthunter_dot_exe(std::string const& target);
+
+ private:
+  unsigned int _hitPoints;
+  unsigned int _maxHitPoints;
+  unsigned int _energyPoints;
+  unsigned int _maxEnergyPoints;
+  unsigned int _level;
+  std::string _name;
+  unsigned int _meleeAttackDamage;
+  unsigned int _rangedAttackDamage;
+  unsigned int _armorDamageReduction;
+};
 #endif

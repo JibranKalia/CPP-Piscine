@@ -6,14 +6,14 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:39 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 11:58:43 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 12:37:21 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-int	main(void)
-{
-	FragTrap robot;
-	return 0;
+int main(void) {
+  FragTrap robot("John");
+  FragTrap boy = robot;
+  return 0;
 }
