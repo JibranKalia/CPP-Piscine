@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 13:32:59 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/06 18:05:01 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/06 18:07:08 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(void) {
   std::cout << b << std::endl;
   std::cout << Fixed::max(a, b) << std::endl;
 
-  Fixed c(2.0f);
+  Fixed c(133.0f);
   Fixed d(-3.0f);
   std::cout << (c < d) << std::endl;
   std::cout << (c >= d) << std::endl;
