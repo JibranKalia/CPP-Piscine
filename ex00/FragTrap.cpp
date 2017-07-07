@@ -6,11 +6,19 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:57:47 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 13:00:13 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 15:04:29 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "ft_color.h"
+
+static FragAttack _randomAttack[6] = {{"Killbot", 33},
+                                      {"Repulsive", 11},
+                                      {"Torgue Fiesta", 8},
+                                      {"Hyperion Punch", 3},
+                                      {"All the Things are Awesome!", 44},
+                                      {"It's a Trap...Card", 26}};
 
 FragTrap::FragTrap(std::string inname)
     : _hitPoints(100),
@@ -22,10 +30,14 @@ FragTrap::FragTrap(std::string inname)
       _meleeAttackDamage(30),
       _rangedAttackDamage(30),
       _armorDamageReduction(5) {
-  std::cout << "FragTrap " << _name << " has been spawned" << std::endl;
+  std::cout << "FragTrap " << RED + _name + EOC << " has been spawned"
+            << std::endl;
 }
 
-FragTrap::~FragTrap() { std::cout << "FragTrap destroyed!" << std::endl; }
+FragTrap::~FragTrap() {
+  std::cout << "FragTrap " << RED + _name + EOC << " was destroyed"
+            << std::endl;
+}
 
 FragTrap& FragTrap::operator=(const FragTrap& src) {
   _hitPoints = src._hitPoints;

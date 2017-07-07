@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:03 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 12:55:44 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 14:33:46 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #define FIXED_HPP
 
 #include <iostream>
+
+typedef struct FragAttack {
+  std::string name;
+  unsigned int damage;
+} FragAttack;
 
 class FragTrap {
  public:
@@ -49,5 +54,6 @@ class FragTrap {
   unsigned int _meleeAttackDamage;
   unsigned int _rangedAttackDamage;
   unsigned int _armorDamageReduction;
+  static FragAttack _randomAttack[6];
 };
 #endif

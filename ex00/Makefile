@@ -6,11 +6,11 @@
 #    By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 08:31:22 by jkalia            #+#    #+#              #
-#    Updated: 2017/07/07 13:00:37 by jkalia           ###   ########.fr        #
+#    Updated: 2017/07/07 15:05:31 by jkalia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fragtrap
+NAME = fragtrap.out
 SRCS = FragTrap.cpp main.cpp
 HDRS = FragTrap.hpp
 
