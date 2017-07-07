@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Human.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/03 08:31:38 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/03 11:05:14 by jkalia           ###   ########.fr       */
+/*   Created: 2017/07/05 14:17:12 by jkalia            #+#    #+#             */
+/*   Updated: 2017/07/05 20:14:23 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <fstream>
-#include <string>
+#include "Human.hpp"
 
-int main ( int argc, char **argv )
-{
-	std::locale loc;
-
-	if ( argc < 2)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		int		i;
-		for (i = 1; i < argc; ++i)
-		{
-			for (size_t j = 0; j < strlen(argv[i]); ++j)
-				std::cout << std::toupper(argv[i][j], loc);
-		}
-		std::cout << std::endl;
-	}
-	
+Human::Human() {
+	std::cout << "Human is born" << std::endl;
 }
+
+Human::~Human() {
+	std::cout << "Human dies" << std::endl;
+}
+
+std::string Human::identify() const {
+  return _brain.identify();
+}
+
+const Brain& Human::getBrain() const { return _brain; }

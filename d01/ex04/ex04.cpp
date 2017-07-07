@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sample.h                                           :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/06 09:27:32 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/06 09:29:22 by jkalia           ###   ########.fr       */
+/*   Created: 2017/07/05 11:45:11 by jkalia            #+#    #+#             */
+/*   Updated: 2017/07/05 12:05:31 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SAMPLE_CLASS_H
-#define SAMPLE_CLASS_H
+#include <iostream>
 
-class Sample {
+int main(void) {
+  std::string original = "HI THIS IS BRAIN";
+  std::string* ptr = &original;
+  std::string& ref = original;
 
-	public:
-		Sample( void );
-		~Sample( void );
-
-		void bar( char const c ) const;
-		void bar( int const n ) const;
-		void bar( float const z ) const;
-		void bar( Sample const & i ) const;
+  std::cout << "Print using Pointer:" << std::endl;
+  std::cout << *ptr << std::endl;
+  std::cout << "Print using Ref:" << std::endl;
+  std::cout << ref << std::endl;
+  return (0);
 }
-
-#endif
