@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 13:49:28 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/06 14:17:26 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/06 17:04:25 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,17 @@ Fixed::~Fixed() { std::cout << "Destructor called" << std::endl; }
 
 Fixed::Fixed(const Fixed& src) {
   std::cout << "Copy constructor called" << std::endl;
+  *this = src;
 
-  _rawbits = src.getRawBits();
-}
+  Fixed& Fixed::operator=(const Fixed& rhs) {
+    std::cout << "Assignation operator called" << std::endl;
+    _rawbits = rhs.getRawBits();
+    return *this;
+  }
 
-Fixed& Fixed::operator=(const Fixed& rhs) {
-  std::cout << "Assignation operator called" << std::endl;
-  _rawbits = rhs.getRawBits();
-  return *this;
-}
+  int Fixed::getRawBits() const {
+    std::cout << "getRawBits member function called" << std::endl;
+    return _rawbits;
+  }
 
-int Fixed::getRawBits() const {
-  std::cout << "getRawBits member function called" << std::endl;
-  return _rawbits;
-}
-
-void Fixed::setRawBits(int const raw) { _rawbits = raw; }
+  void Fixed::setRawBits(int const raw) { _rawbits = raw; }

@@ -26,13 +26,12 @@ class Fixed {
   int getRawBits() const;
   void setRawBits(int const raw);
   float toFloat() const;
-  int	toInt() const;
+  int toInt() const;
 
  private:
   int _rawbits;
   static const int _nfracbits;
 };
 
-
- std::ostream& operator<<(std::ostream &out, const Fixed &f);
+std::ostream& operator<<(std::ostream& out, const Fixed& f);
 #endif
