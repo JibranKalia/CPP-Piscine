@@ -1,0 +1,10 @@
+Ad Hoc Polymorphism
+
+Function Overloading
+Define functions same name but different paramerters
+
+
+Operator Overload
+
+Canonical Form
+

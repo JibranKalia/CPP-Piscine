@@ -1,0 +1,21 @@
+User should not have direct access to attribute. 
+
+
+int	getFoo( void ) const;
+setFoo
+
+
+int	Sample::getFoo(void) const {
+	return this->v_foo
+}
+
+
+std::ifstream	ifs("numbers");
+unsigned int	dst;
+unsigned int	dst2;
+
+ifs >> dst >> dst2;
+std::cout << dst << " " << dst2 << std::endl;
+ifs.close();:w
+
+std::ofstream	ofs("tests.out");
