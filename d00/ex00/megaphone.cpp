@@ -10,25 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 
-int main ( int argc, char **argv )
-{
-	std::locale loc;
+int main(int argc, char **argv) {
+  std::locale loc;
 
-	if ( argc < 2)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		int		i;
-		for (i = 1; i < argc; ++i)
-		{
-			for (size_t j = 0; j < strlen(argv[i]); ++j)
-				std::cout << std::toupper(argv[i][j], loc);
-		}
-		std::cout << std::endl;
-	}
-	
+  if (argc < 2)
+    std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+  else {
+    int i;
+    for (i = 1; i < argc; ++i) {
+      for (size_t j = 0; j < strlen(argv[i]); ++j)
+        std::cout << std::toupper(argv[i][j], loc);
+    }
+    std::cout << std::endl;
+  }
 }
