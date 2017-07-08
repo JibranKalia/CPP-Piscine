@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:57:47 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 19:20:31 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 21:31:20 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ FragAttack FragTrap::_randomAttack[6] = {{"Killbot", 33},
 FragTrap::FragTrap(std::string inname) {
   _hitPoints = 100;
   _maxHitPoints = 100;
-  _energyPoints = 100;
-  _maxEnergyPoints = 100;
+  _energyPoints = 120;
+  _maxEnergyPoints = 120;
   _level = 1;
   _name = inname;
-  _meleeAttackDamage = 30;
-  _rangedAttackDamage = 30;
+  _meleeAttackDamage = 60;
+  _rangedAttackDamage = 20;
   _armorDamageReduction = 5;
   std::cout << "FR4G-TP " << RED + _name + EOC << " has been spawned"
             << std::endl;
@@ -37,11 +37,11 @@ FragTrap::FragTrap(std::string inname) {
 FragTrap::FragTrap() {
   _hitPoints = 100;
   _maxHitPoints = 100;
-  _energyPoints = 100;
-  _maxEnergyPoints = 100;
+  _energyPoints = 120;
+  _maxEnergyPoints = 120;
   _level = 1;
-  _meleeAttackDamage = 30;
-  _rangedAttackDamage = 30;
+  _meleeAttackDamage = 60;
+  _rangedAttackDamage = 20;
   _armorDamageReduction = 5;
   std::cout << "FR4G-TP " << RED << "nameless" << EOC << " has been spawned"
             << std::endl;
