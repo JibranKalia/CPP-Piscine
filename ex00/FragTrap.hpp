@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:03 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 14:33:46 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 15:34:39 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct FragAttack {
 
 class FragTrap {
  public:
+  FragTrap();
   FragTrap(std::string inname);
   ~FragTrap();
   FragTrap(const FragTrap& src);
@@ -34,6 +35,7 @@ class FragTrap {
   unsigned int get_level() const;
   std::string get_name() const;
   void set_name(std::string);
+  void set_level(unsigned int amount);
   unsigned int get_meleeAttackDamage() const;
   unsigned int get_rangedAttackDamage() const;
   unsigned int get_armorDamageReduction() const;
