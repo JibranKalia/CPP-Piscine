@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:39 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 20:39:33 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 20:57:34 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 
 int main(void) {
   SuperTrap robot("Justin");
+	std::cout << robot.get_maxHitPoints() << std::endl;
+	/**
   SuperTrap robot1;
   SuperTrap robot2("John");
   SuperTrap robot3 = robot2;
@@ -45,5 +47,6 @@ int main(void) {
   robot3.beRepaired(25);
   robot3.beRepaired(55);
   robot3.beRepaired(55);
+  **/
   return 0;
 }

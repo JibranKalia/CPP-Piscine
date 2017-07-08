@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 19:41:14 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 20:00:44 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 21:00:10 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 #include "ft_color.h"
 
 NinjaTrap::NinjaTrap(std::string inname) {
-  _hitPoints = 100;
-  _maxHitPoints = 100;
-  _energyPoints = 100;
-  _maxEnergyPoints = 100;
+  _hitPoints = 60;
+  _maxHitPoints = 60;
+  _energyPoints = 120;
+  _maxEnergyPoints = 120;
   _level = 1;
   _name = inname;
-  _meleeAttackDamage = 30;
-  _rangedAttackDamage = 30;
-  _armorDamageReduction = 5;
+  _meleeAttackDamage = 60;
+  _rangedAttackDamage = 5;
+  _armorDamageReduction = 0;
   std::cout << BOLD_WHITE << "NINJA TRAP " << EOC << RED + _name + EOC
             << " has been spawned" << std::endl;
 }
 
 NinjaTrap::NinjaTrap() {
-  _hitPoints = 100;
-  _maxHitPoints = 100;
-  _energyPoints = 100;
-  _maxEnergyPoints = 100;
+  _hitPoints = 60;
+  _maxHitPoints = 60;
+  _energyPoints = 120;
+  _maxEnergyPoints = 120;
   _level = 1;
-  _meleeAttackDamage = 30;
-  _rangedAttackDamage = 30;
-  _armorDamageReduction = 5;
+  _meleeAttackDamage = 60;
+  _rangedAttackDamage = 5;
+  _armorDamageReduction = 0;
   std::cout << BOLD_WHITE << "NINJA TRAP " << EOC << RED << "nameless" << EOC
             << " has been spawned" << std::endl;
   srand(time(0));

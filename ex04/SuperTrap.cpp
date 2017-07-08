@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 20:04:41 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 20:41:50 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 20:56:12 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include "ft_color.h"
 
 SuperTrap::SuperTrap(std::string inname) {
-  _hitPoints = 100;
-  _maxHitPoints = 100;
+  _hitPoints = FragTrap::_hitPoints;
+  _maxHitPoints = NinjaTrap::_maxHitPoints;
   _energyPoints = 120;
   _maxEnergyPoints = 120;
   _level = 1;
