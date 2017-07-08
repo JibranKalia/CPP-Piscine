@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 18:08:23 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 18:27:50 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 18:36:07 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ std::string ScavTrap::st_challenge[6] = {
 ScavTrap::ScavTrap(std::string inname)
     : _hitPoints(100),
       _maxHitPoints(100),
-      _energyPoints(100),
+      _energyPoints(50),
       _maxEnergyPoints(100),
       _level(1),
       _name(inname),
-      _meleeAttackDamage(30),
-      _rangedAttackDamage(30),
-      _armorDamageReduction(5) {
+      _meleeAttackDamage(20),
+      _rangedAttackDamage(15),
+      _armorDamageReduction(3) {
   std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " has been spawned"
             << std::endl;
 }
@@ -38,12 +38,12 @@ ScavTrap::ScavTrap(std::string inname)
 ScavTrap::ScavTrap()
     : _hitPoints(100),
       _maxHitPoints(100),
-      _energyPoints(100),
+      _energyPoints(50),
       _maxEnergyPoints(100),
       _level(1),
-      _meleeAttackDamage(30),
-      _rangedAttackDamage(30),
-      _armorDamageReduction(5) {
+      _meleeAttackDamage(20),
+      _rangedAttackDamage(15),
+      _armorDamageReduction(3) {
   std::cout << "TERMINATOR " << BOLD_PURPLE << "nameless" << EOC
             << " has been spawned" << std::endl;
   srand(time(0));
