@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/07 11:58:03 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 18:06:07 by jkalia           ###   ########.fr       */
+/*   Created: 2017/07/07 18:06:24 by jkalia            #+#    #+#             */
+/*   Updated: 2017/07/07 18:22:26 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
 #include <iostream>
 
-typedef struct FragAttack {
-  std::string name;
-  unsigned int damage;
-} FragAttack;
-
-class FragTrap {
+class ScavTrap {
  public:
-  FragTrap();
-  FragTrap(std::string inname);
-  ~FragTrap();
-  FragTrap(const FragTrap& src);
+  ScavTrap();
+  ScavTrap(std::string inname);
+  ~ScavTrap();
+  ScavTrap(const ScavTrap& src);
 
-  FragTrap& operator=(const FragTrap& src);
+  ScavTrap& operator=(const ScavTrap& src);
   unsigned int get_hitPoints() const;
   unsigned int get_maxHitPoints() const;
   unsigned int get_energyPoints() const;
@@ -44,9 +39,10 @@ class FragTrap {
   bool meleeAttack(std::string const& target);
   void takeDamage(unsigned int amount);
   void beRepaired(unsigned int amount);
-  bool vaulthunter_dot_exe(std::string const& target);
+  bool challengeNewcomer(std::string const& target);
 
  private:
+  static std::string st_challenge[6];
   unsigned int _hitPoints;
   unsigned int _maxHitPoints;
   unsigned int _energyPoints;
@@ -56,6 +52,5 @@ class FragTrap {
   unsigned int _meleeAttackDamage;
   unsigned int _rangedAttackDamage;
   unsigned int _armorDamageReduction;
-  static FragAttack _randomAttack[6];
 };
 #endif

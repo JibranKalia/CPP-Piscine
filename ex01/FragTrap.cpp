@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:57:47 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 18:28:20 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 18:28:03 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ FragTrap::FragTrap(std::string inname)
       _armorDamageReduction(5) {
   std::cout << "FR4G-TP " << RED + _name + EOC << " has been spawned"
             << std::endl;
-  srand(time(0));
 }
 
 FragTrap::FragTrap()
@@ -46,6 +45,7 @@ FragTrap::FragTrap()
       _armorDamageReduction(5) {
   std::cout << "FR4G-TP " << RED << "nameless" << EOC << " has been spawned"
             << std::endl;
+  srand(time(0));
 }
 
 FragTrap::~FragTrap() {
