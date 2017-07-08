@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 18:30:12 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 18:59:33 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 19:22:16 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ ClapTrap::ClapTrap(std::string inname)
       _meleeAttackDamage(30),
       _rangedAttackDamage(30),
       _armorDamageReduction(5) {
-  std::cout << PURPLE << "CLAPTAP STARTUP SEQUENCE: " << EOC << RED + _name + EOC << " has been spawned"
-            << std::endl;
+  std::cout << PURPLE << "CLAPTAP STARTUP SEQUENCE: " << EOC
+            << RED + _name + EOC << " has been spawned" << std::endl;
 }
 
 ClapTrap::ClapTrap()
@@ -33,16 +33,18 @@ ClapTrap::ClapTrap()
       _energyPoints(100),
       _maxEnergyPoints(100),
       _level(1),
+      _name("namelessClapTrap"),
       _meleeAttackDamage(30),
       _rangedAttackDamage(30),
       _armorDamageReduction(5) {
-  std::cout << PURPLE << "CLAPTAP STARTUP SEQUENCE: " << EOC << RED << "nameless" << EOC << " has been spawned"
-            << std::endl;
+  std::cout << PURPLE << "CLAPTAP STARTUP SEQUENCE: " << EOC
+            << RED + _name + EOC << " has been spawned" << std::endl;
   srand(time(0));
 }
 
 ClapTrap::~ClapTrap() {
-  std::cout << PURPLE <<  "CLAPTAP DESTRUCTION: "<< EOC << RED + _name + EOC << " The end." << std::endl;
+  std::cout << PURPLE << "CLAPTAP DESTRUCTION: " << EOC << RED + _name + EOC
+            << " The end." << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src) {

@@ -6,15 +6,14 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 18:30:22 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 18:55:51 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 19:24:59 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
-
 class ClapTrap {
  public:
   ClapTrap();

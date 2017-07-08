@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:39 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 18:25:50 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 19:27:57 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,5 @@ int main(void) {
   robot3.beRepaired(55);
   robot3.beRepaired(55);
 
-  return 0;
   return 0;
 }

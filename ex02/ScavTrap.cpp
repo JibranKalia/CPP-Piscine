@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 18:08:23 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 18:36:07 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 19:31:13 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,30 @@ std::string ScavTrap::st_challenge[6] = {
     "Type with a keyboard that is backward for one whole day.",
     "Who can sneeze the longest."};
 
-ScavTrap::ScavTrap(std::string inname)
-    : _hitPoints(100),
-      _maxHitPoints(100),
-      _energyPoints(50),
-      _maxEnergyPoints(100),
-      _level(1),
-      _name(inname),
-      _meleeAttackDamage(20),
-      _rangedAttackDamage(15),
-      _armorDamageReduction(3) {
+ScavTrap::ScavTrap(std::string inname) {
+  _hitPoints = 100;
+  _maxHitPoints = 100;
+  _energyPoints = 50;
+  _maxEnergyPoints = 100;
+  _level = 1;
+  _name = inname;
+  _meleeAttackDamage = 20;
+  _rangedAttackDamage = 15;
+  _armorDamageReduction = 3;
   std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " has been spawned"
             << std::endl;
 }
 
-ScavTrap::ScavTrap()
-    : _hitPoints(100),
-      _maxHitPoints(100),
-      _energyPoints(50),
-      _maxEnergyPoints(100),
-      _level(1),
-      _meleeAttackDamage(20),
-      _rangedAttackDamage(15),
-      _armorDamageReduction(3) {
+ScavTrap::ScavTrap() {
+  _hitPoints = 100;
+  _maxHitPoints = 100;
+  _energyPoints = 50;
+  _maxEnergyPoints = 100;
+  _level = 1;
+  _name = "nameless";
+  _meleeAttackDamage = 20;
+  _rangedAttackDamage = 15;
+  _armorDamageReduction = 3;
   std::cout << "TERMINATOR " << BOLD_PURPLE << "nameless" << EOC
             << " has been spawned" << std::endl;
   srand(time(0));
@@ -67,24 +68,6 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& src) {
   return *this;
 }
 
-unsigned int ScavTrap::get_hitPoints() const { return _hitPoints; }
-unsigned int ScavTrap::get_maxHitPoints() const { return _maxHitPoints; }
-unsigned int ScavTrap::get_energyPoints() const { return _energyPoints; }
-unsigned int ScavTrap::get_maxEnergyPoints() const { return _maxEnergyPoints; }
-unsigned int ScavTrap::get_level() const { return _level; }
-std::string ScavTrap::get_name() const { return _name; }
-void ScavTrap::set_name(std::string inname) { _name = inname; }
-void ScavTrap::set_level(unsigned int newlevel) { _level = newlevel; }
-unsigned int ScavTrap::get_meleeAttackDamage() const {
-  return _meleeAttackDamage;
-}
-unsigned int ScavTrap::get_rangedAttackDamage() const {
-  return _rangedAttackDamage;
-}
-unsigned int ScavTrap::get_armorDamageReduction() const {
-  return _armorDamageReduction;
-}
-
 bool ScavTrap::rangedAttack(std::string const& target) {
   std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " attacks "
             << BOLD_PURPLE + target + EOC << " at range, causing " << GREEN
@@ -101,46 +84,6 @@ bool ScavTrap::meleeAttack(std::string const& target) {
 }
 
 ScavTrap::ScavTrap(const ScavTrap& src) { *this = src; }
-
-unsigned int calcArmorReduction(ScavTrap& src, unsigned int amount) {
-  unsigned int level = src.get_level();
-  if (level == 0) return (amount);
-  if (amount <= (level * 2)) return (0);
-  amount -= (level * 2);
-  --level;
-  src.set_level(level);
-  std::cout << "TERMINATOR " << BOLD_PURPLE + src.get_name() + EOC
-            << " uses armor protection. Its level is now " << BOLD_PURPLE
-            << src.get_level() << EOC << std::endl;
-  return (amount);
-}
-
-void ScavTrap::takeDamage(unsigned int amount) {
-  int out;
-  int newamount;
-
-  newamount = calcArmorReduction(*this, amount);
-  out = this->_hitPoints - newamount;
-  if (out <= 0)
-    _hitPoints = 0;
-  else
-    _hitPoints = out;
-  std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " takes "
-            << BOLD_PURPLE << amount << EOC << " damage. Its Hit Point is now "
-            << GREEN << _hitPoints << EOC << std::endl;
-}
-
-void ScavTrap::beRepaired(unsigned int amount) {
-  if (_hitPoints + amount >= _maxHitPoints) {
-    _hitPoints = _maxHitPoints;
-  } else {
-    _hitPoints += amount;
-  }
-
-  std::cout << BOLD_PURPLE + _name + EOC
-            << " was successfully repaired, now he got " << GREEN << _hitPoints
-            << EOC << " HP." << std::endl;
-}
 
 bool ScavTrap::challengeNewcomer(std::string const& target) {
   std::string attack;

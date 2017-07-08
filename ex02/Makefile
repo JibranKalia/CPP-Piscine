@@ -6,15 +6,13 @@
 #    By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 08:31:22 by jkalia            #+#    #+#              #
-#    Updated: 2017/07/07 18:44:56 by jkalia           ###   ########.fr        #
+#    Updated: 2017/07/07 19:09:37 by jkalia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fragtrap.out
-SRCS = ClapTrap.cpp main.cpp
-#SRCS = ClapTrap.cpp FragTrap.cpp ScavTrap.cpp main.cpp
-#HDRS = ClapTrap.hpp FragTrap.hpp ScavTrap.hpp
-HDRS = ClapTrap.hpp
+SRCS = ClapTrap.cpp FragTrap.cpp ScavTrap.cpp main.cpp
+HDRS = ClapTrap.hpp FragTrap.hpp ScavTrap.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 LIBS =
