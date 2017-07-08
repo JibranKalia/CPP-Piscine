@@ -97,8 +97,7 @@ void NinjaTrap::ninjaShoebox(const FragTrap& frag) const {
 }
 
 void NinjaTrap::ninjaShoebox(const NinjaTrap& ninja) const {
-  std::cout << BOLD_RED << "Hey, Ninja: " << _name << " put this ant in your brother "
-            << ninja.get_name()
-            << " body, causing infinite Damage points" << EOC
-            << std::endl;
+  std::cout << BOLD_RED << "Hey, Ninja: " << _name
+            << " put this ant in your brother " << ninja.get_name()
+            << " body, causing infinite Damage points" << EOC << std::endl;
 }
