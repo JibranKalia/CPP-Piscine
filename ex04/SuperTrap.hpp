@@ -16,8 +16,8 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
-#include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "ScavTrap.hpp"
 
 class SuperTrap : public NinjaTrap, public FragTrap {
  public:

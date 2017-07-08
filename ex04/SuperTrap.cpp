@@ -61,11 +61,11 @@ SuperTrap& SuperTrap::operator=(const SuperTrap& src) {
 }
 
 bool SuperTrap::rangedAttack(std::string const& target) {
-	return (FragTrap::rangedAttack(target));
+  return (FragTrap::rangedAttack(target));
 }
 
 bool SuperTrap::meleeAttack(std::string const& target) {
-	return (NinjaTrap::meleeAttack(target));
+  return (NinjaTrap::meleeAttack(target));
 }
 
 SuperTrap::SuperTrap(const SuperTrap& src) { *this = src; }
