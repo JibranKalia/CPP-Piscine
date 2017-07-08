@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:39 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 20:19:20 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 20:39:33 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,23 @@ int main(void) {
   NinjaTrap test2("Lucifer");
   ClapTrap test3("Satan");
 
-  /**
   robot1.set_name("Beth");
 
   robot1.meleeAttack("Brad");
   robot2.rangedAttack("Cooper");
   robot3.rangedAttack("William");
   robot3.takeDamage(44);
-  **/
 
   robot3.ninjaShoebox(test0);
   robot3.ninjaShoebox(test1);
   robot3.ninjaShoebox(test2);
   robot3.ninjaShoebox(test3);
 
-  /**
   robot3.takeDamage(101);
   robot3.takeDamage(4);
   robot3.takeDamage(101);
   robot3.beRepaired(25);
   robot3.beRepaired(55);
   robot3.beRepaired(55);
-  **/
   return 0;
 }

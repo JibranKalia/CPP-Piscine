@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 19:41:14 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 20:00:44 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 20:40:35 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,14 @@ NinjaTrap& NinjaTrap::operator=(const NinjaTrap& src) {
 }
 
 bool NinjaTrap::rangedAttack(std::string const& target) {
-  std::cout << "FR4G-TP " << BLUE + _name + EOC << " attacks "
+  std::cout << "NINJA TRAP " << BLUE + _name + EOC << " attacks "
             << RED + target + EOC << " at range, causing " << GREEN
             << _rangedAttackDamage << EOC << " points of damage !" << std::endl;
   return true;
 }
 
 bool NinjaTrap::meleeAttack(std::string const& target) {
-  std::cout << "FR4G-TP " << BLUE + _name + EOC << " attacks "
+  std::cout << "NINJA TRAP " << BLUE + _name + EOC << " attacks "
             << RED + target + EOC << " in close-combat, causing " << GREEN
             << _meleeAttackDamage << EOC << " points of damage !" << std::endl;
   return true;

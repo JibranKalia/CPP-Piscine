@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 20:04:41 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 20:20:01 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 20:41:50 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,34 +16,34 @@
 SuperTrap::SuperTrap(std::string inname) {
   _hitPoints = 100;
   _maxHitPoints = 100;
-  _energyPoints = 50;
-  _maxEnergyPoints = 100;
+  _energyPoints = 120;
+  _maxEnergyPoints = 120;
   _level = 1;
   _name = inname;
-  _meleeAttackDamage = 20;
-  _rangedAttackDamage = 15;
-  _armorDamageReduction = 3;
-  std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " has been spawned"
+  _meleeAttackDamage = 60;
+  _rangedAttackDamage = 20;
+  _armorDamageReduction = 5;
+  std::cout << "SUPER TRAP " << BOLD_GREEN + _name + EOC << " has been spawned"
             << std::endl;
 }
 
 SuperTrap::SuperTrap() {
   _hitPoints = 100;
   _maxHitPoints = 100;
-  _energyPoints = 50;
-  _maxEnergyPoints = 100;
+  _energyPoints = 120;
+  _maxEnergyPoints = 120;
   _level = 1;
-  _name = "nameless";
-  _meleeAttackDamage = 20;
-  _rangedAttackDamage = 15;
-  _armorDamageReduction = 3;
-  std::cout << "TERMINATOR " << BOLD_PURPLE << "nameless" << EOC
+  _meleeAttackDamage = 60;
+  _rangedAttackDamage = 20;
+  _armorDamageReduction = 5;
+
+  std::cout << "SUPER TRAP " << BOLD_GREEN << "nameless" << EOC
             << " has been spawned" << std::endl;
   srand(time(0));
 }
 
 SuperTrap::~SuperTrap() {
-  std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " was destroyed"
+  std::cout << "SUPER TRAP " << BOLD_GREEN + _name + EOC << " was destroyed"
             << std::endl;
 }
 
@@ -61,18 +61,11 @@ SuperTrap& SuperTrap::operator=(const SuperTrap& src) {
 }
 
 bool SuperTrap::rangedAttack(std::string const& target) {
-  std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " attacks "
-            << BOLD_PURPLE + target + EOC << " at range, causing " << GREEN
-            << _rangedAttackDamage << EOC << " points of damage !" << std::endl;
-  return true;
+	return (FragTrap::rangedAttack(target));
 }
 
 bool SuperTrap::meleeAttack(std::string const& target) {
-  std::cout << "TERMINATOR " << BOLD_PURPLE + _name + EOC << " attacks "
-            << BOLD_PURPLE + target + EOC << " in close-combat, causing "
-            << GREEN << _meleeAttackDamage << EOC << " points of damage !"
-            << std::endl;
-  return true;
+	return (NinjaTrap::meleeAttack(target));
 }
 
 SuperTrap::SuperTrap(const SuperTrap& src) { *this = src; }

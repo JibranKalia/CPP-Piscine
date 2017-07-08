@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 11:58:03 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/07 19:24:59 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/07 20:35:42 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct FragAttack {
   unsigned int damage;
 } FragAttack;
 
-class FragTrap : public ClapTrap {
+class FragTrap : public virtual ClapTrap {
  public:
   FragTrap();
   FragTrap(std::string inname);
