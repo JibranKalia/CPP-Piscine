@@ -6,7 +6,7 @@
 #    By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 08:31:22 by jkalia            #+#    #+#              #
-#    Updated: 2017/07/10 12:01:38 by jkalia           ###   ########.fr        #
+#    Updated: 2017/07/11 14:42:50 by jkalia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ CPPFLAGS += -Wall -Wextra -Werror
 CFLAGS +=
 LDFLAGS += -Wall -Wextra -Werror
 
-CXX = clang++
+CXX = g++
 
 .PHONY: format clean fclean re
 
