@@ -6,13 +6,13 @@
 #    By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/03 08:31:22 by jkalia            #+#    #+#              #
-#    Updated: 2017/07/11 15:26:46 by jkalia           ###   ########.fr        #
+#    Updated: 2017/07/11 18:10:05 by jkalia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat.out
-SRCS = Bureaucrat.cpp main.cpp
-HDRS = Bureaucrat.hpp
+NAME = form.out
+SRCS = Bureaucrat.cpp Form.cpp main.cpp
+HDRS = Bureaucrat.hpp Form.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 LIBS =

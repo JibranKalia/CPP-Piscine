@@ -6,7 +6,7 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 12:02:33 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/11 17:50:21 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/11 19:16:15 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ std::string Bureaucrat::getName() const { return this->_name; }
 int Bureaucrat::getGrade() const { return this->_grade; }
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& src) {
-  out << src.getName() << ",  bureaucrat grade " << src.getGrade();
+  out << src.getName() << ", bureaucrat grade " << src.getGrade();
   return out;
 }
 
@@ -60,4 +60,17 @@ void Bureaucrat::decGrade() {
     throw Bureaucrat::GradeTooLowException();
   else
     ++this->_grade;
+}
+
+void Bureaucrat::signForm(Form& f)
+{
+	try
+	{
+		f.beSigned(*this);
+		std::cout << this->_name << " signs " << f.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << this->_name << " cannot sign " << f.getName() << " because " << e.what() << std::endl;
+	}
 }

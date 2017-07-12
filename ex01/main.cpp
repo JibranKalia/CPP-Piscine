@@ -6,57 +6,36 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 12:02:42 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/11 15:24:21 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/11 18:37:03 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 int main(void) {
-  {
-    try {
-      Bureaucrat jim("Jim", -2);
-      std::cout << jim << std::endl;
-    } catch (std::exception& e) {
-      std::cout << e.what() << std::endl;
-    }
-  }
-  {
-    Bureaucrat jim("jimmig", 12);
-    try {
-      for (int i = 0; i < 150; i++) {
-        jim.incGrade();
-        std::cout << jim << std::endl;
-      }
-    } catch (std::exception& e) {
-      std::cout << e.what() << std::endl;
-    }
-    std::cout << jim << std::endl;
-  }
+	Bureaucrat suit1 = Bureaucrat("The Bureaucrat 1", 40);
+	Bureaucrat suit2 = Bureaucrat("The Bureaucrat 2", 20);
 
-  {
-    Bureaucrat jim("jimmig", 132);
-    try {
-      for (int i = 0; i < 150; i++) {
-        jim.decGrade();
-        std::cout << jim << std::endl;
-      }
-    } catch (std::exception& e) {
-      std::cout << e.what() << std::endl;
-    }
-    std::cout << jim << std::endl;
-  }
+	Form contract1 = Form("Contract 1", 50, 70);
+	Form contract2 = Form("Contract 2", 20, 70);
 
-  {
-    try {
-      Bureaucrat jim("jimmig", 0);
-      for (int i = 0; i < 150; i++) {
-        jim.decGrade();
-        std::cout << jim << std::endl;
-      }
-      std::cout << jim << std::endl;
-    } catch (std::exception& e) {
-      std::cout << e.what() << std::endl;
-    }
-  }
+	suit1.signForm(contract1);
+	std::cout << suit1 << std::endl;
+	std::cout << contract1 << std::endl;
+	std::cout << std::endl;
+
+	suit1.signForm(contract2);
+	std::cout << suit1 << std::endl;
+	std::cout << contract2 << std::endl;
+	std::cout << std::endl;
+
+	suit2.signForm(contract1);
+	std::cout << suit2 << std::endl;
+	std::cout << contract1 << std::endl;
+	std::cout << std::endl;
+
+	suit2.signForm(contract2);
+	std::cout << suit2 << std::endl;
+	std::cout << contract2 << std::endl;
   return (0);
 }

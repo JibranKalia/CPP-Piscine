@@ -6,13 +6,15 @@
 /*   By: jkalia <jkalia@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/10 12:02:38 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/11 17:42:05 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/11 18:47:32 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Form.hpp"
 #ifndef BUREAUCRAT_HPP
 #define BUREAUCRAT_HPP
 #include <iostream>
+class Form;
 
 class Bureaucrat {
  public:
@@ -35,6 +37,7 @@ class Bureaucrat {
   int getGrade() const;
   void incGrade();
   void decGrade();
+  void signForm(Form& f);
 
  private:
   const std::string _name;
