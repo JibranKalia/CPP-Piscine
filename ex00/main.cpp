@@ -10,59 +10,53 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "Bureaucrat.hpp"
-int main(void)
-{
-	{
-		try
-		{
-			Bureaucrat jim("Jim", -2);
-			std::cout << jim << std::endl;
-		}
-		catch (std::exception &e)
-		{
-			std::cout << e.what() << std::endl;
-		}
-	}
-	{
-		Bureaucrat	jim("jimmig", 12);
-		try {
-			for(int i = 0; i < 150; i++) {
-				jim.incGrade();
-				std::cout << jim << std::endl;
-			}
-		} catch (std::exception& e) {
-			std::cout << e.what() << std::endl;
-		}
-		std::cout << jim << std::endl;
-	}
+int main(void) {
+  {
+    try {
+      Bureaucrat jim("Jim", -2);
+      std::cout << jim << std::endl;
+    } catch (std::exception& e) {
+      std::cout << e.what() << std::endl;
+    }
+  }
+  {
+    Bureaucrat jim("jimmig", 12);
+    try {
+      for (int i = 0; i < 150; i++) {
+        jim.incGrade();
+        std::cout << jim << std::endl;
+      }
+    } catch (std::exception& e) {
+      std::cout << e.what() << std::endl;
+    }
+    std::cout << jim << std::endl;
+  }
 
-	{
-		Bureaucrat	jim("jimmig", 132);
-		try {
-			for(int i = 0; i < 150; i++) {
-				jim.decGrade();
-				std::cout << jim << std::endl;
-			}
-		} catch (std::exception& e) {
-			std::cout << e.what() << std::endl;
-		}
-		std::cout << jim << std::endl;
-	}
+  {
+    Bureaucrat jim("jimmig", 132);
+    try {
+      for (int i = 0; i < 150; i++) {
+        jim.decGrade();
+        std::cout << jim << std::endl;
+      }
+    } catch (std::exception& e) {
+      std::cout << e.what() << std::endl;
+    }
+    std::cout << jim << std::endl;
+  }
 
-	{
-		try {
-			Bureaucrat	jim("jimmig", 0);
-			for(int i = 0; i < 150; i++) {
-				jim.decGrade();
-				std::cout << jim << std::endl;
-			}
-			std::cout << jim << std::endl;
-		} catch (std::exception& e) {
-			std::cout << e.what() << std::endl;
-		}
-	}
-	return (0);
+  {
+    try {
+      Bureaucrat jim("jimmig", 0);
+      for (int i = 0; i < 150; i++) {
+        jim.decGrade();
+        std::cout << jim << std::endl;
+      }
+      std::cout << jim << std::endl;
+    } catch (std::exception& e) {
+      std::cout << e.what() << std::endl;
+    }
+  }
+  return (0);
 }
-
