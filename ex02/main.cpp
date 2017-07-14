@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 15:42:20 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/13 18:34:20 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/13 18:39:34 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ std::ostream& operator<<(std::ostream& out, T& src) {
 }
 
 int main(void) {
-  Array<int> a(4);
+  Array<int> a(10);
   std::cout << a << std::endl;
-  //	a[3] = 42;
+  a[3] = 42;
   Array<int> b(a);
   std::cout << b << std::endl;
   try {
@@ -36,6 +36,7 @@ int main(void) {
   Array<double> c(3);
   std::cout << c << std::endl;
   Array<float> d;
-  delete new Array<char>;
+  Array<float> f(0);
+  delete new Array<char>(1000);
   return 0;
 }

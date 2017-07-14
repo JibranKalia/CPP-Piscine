@@ -6,7 +6,7 @@
 /*   By: jkalia <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 15:35:50 by jkalia            #+#    #+#             */
-/*   Updated: 2017/07/13 18:30:40 by jkalia           ###   ########.fr       */
+/*   Updated: 2017/07/13 18:37:35 by jkalia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class Array {
     return *this;
   }
 
-  T operator[](unsigned int n) {
+  T& operator[](unsigned int n) {
     if (n + 1 > this->_size || this->_array == NULL) throw std::exception();
     return (this->_array[n]);
   }
